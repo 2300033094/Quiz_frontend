@@ -20,7 +20,7 @@ const Home = () => {
     setLoading(true);
     try {
       // Fetch quizzes
-      const quizzesResponse = await axios.get("http://localhost:8082/quizzes");
+      const quizzesResponse = await axios.get("http://localhost:30083/back1/quizzes");
       setQuizes(quizzesResponse.data);
 
       // If user is teacher, fetch additional statistics
