@@ -15,7 +15,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:8082/register", {
+      const response = await axios.post("http://localhost:30083/back1/register", {
         email,
         username,
         phone,
