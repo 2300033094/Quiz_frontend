@@ -33,9 +33,9 @@ const StudentScores = () => {
     try {
       // Fetch all results, statistics, and recent results
       const [resultsResponse, statisticsResponse, recentResponse] = await Promise.all([
-        axios.get("http://localhost:8082/quiz-results"),
-        axios.get("http://localhost:8082/quiz-statistics"),
-        axios.get("http://localhost:8082/quiz-results/recent")
+        axios.get("http://localhost:30083/back1/quiz-results"),
+        axios.get("http://localhost:30083/back1/quiz-statistics"),
+        axios.get("http://localhost:30083/back1/quiz-results/recent")
       ]);
 
       setAllResults(resultsResponse.data);
@@ -51,7 +51,7 @@ const StudentScores = () => {
 
   const fetchQuizResults = async (quizId) => {
     try {
-      const response = await axios.get(`http://localhost:8082/quiz-results/quiz/${quizId}`);
+      const response = await axios.get(`http://localhost:30083/back1/quiz-results/quiz/${quizId}`);
       setQuizResults(response.data);
       setSelectedQuiz(quizId);
       setActiveTab('quiz-details');
