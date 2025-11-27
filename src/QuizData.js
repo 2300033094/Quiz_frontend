@@ -22,7 +22,7 @@ const QuizData = () => {
   useEffect(() => {
     const fetchQuizDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8082/quizzes/${id}`);
+        const response = await axios.get(`http://localhost:30083/back1/quizzes/${id}`);
         setQuizDetails(response.data);
         console.log(response.data);
       } catch (error) {
